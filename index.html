@@ -43,7 +43,7 @@
         <h2>This week</h2>
         <h3>Next Session &amp; Details</h3>
         <p class="session-name">Capture the Sky</p>
-        <p>Sat, Oct 17 · 2:00 pm-5:00 pm</p>
+        <p>Sat, Oct 17  2:00 pm-5:00 pm</p>
         <p>Riverwood Park</p>
 
         <hr>
@@ -70,7 +70,7 @@
         <p class="eyebrow">01&nbsp; OUTDOOR</p>
         <h3>Capture the Sky</h3>
         <p>Head outside to explore the open sky, chase the light, and find a sky that feels like your own.</p>
-        <button class="btn">Register Now</button>
+        <button class="btn" onclick="alert('Registered successfully!')">Register Now</button>
       </article>
 
       <article class="card card-pink">
@@ -78,7 +78,7 @@
         <p class="eyebrow">02&nbsp; HISTORY</p>
         <h3>Tomb Explorer</h3>
         <p>Follow the clues, crack ancient puzzles and traps, and uncover hidden secrets like a real expedition team.</p>
-        <button class="btn">Register Now</button>
+        <button class="btn" onclick="alert('Registered successfully!')">Register Now</button>
       </article>
 
       <article class="card">
@@ -86,7 +86,7 @@
         <p class="eyebrow">03&nbsp; CRAFT</p>
         <h3>Dyed by Nature</h3>
         <p>Use plants, fruits and flowers to make natural dyes for tie-dye, then add stitching to explore how image, texture and handcraft connect.</p>
-        <button class="btn">Register Now</button>
+        <button class="btn" onclick="alert('Registered successfully!')">Register Now</button>
       </article>
 
     </section>
@@ -104,21 +104,12 @@
     const navLinks = document.querySelectorAll(".nav-links a");
 
     navLinks.forEach(function (link) {
-      link.addEventListener("click", function () {
+      link.onclick = function () {
         navLinks.forEach(function (item) {
           item.classList.remove("active");
         });
         link.classList.add("active");
-      });
-    });
-
-    const registerButtons = document.querySelectorAll(".btn");
-
-    registerButtons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        button.classList.add("clicked");
-        alert("Registered successfully!");
-      });
+      };
     });
   </script>
 
