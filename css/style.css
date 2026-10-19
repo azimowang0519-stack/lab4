@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #FCF7E8;
@@ -21,6 +25,11 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+a:focus,
+button:focus {
+  outline: none;
 }
 
 img {
@@ -70,6 +79,10 @@ img {
 
 .logo img {
   width: 37px;
+  height: 33px;
+  object-fit: cover;
+  object-position: 50% 64%;
+  clip-path: polygon(50% 0%, 61.8% 38.2%, 100% 38.2%, 69.1% 61.8%, 80.9% 100%, 50% 76.4%, 19.1% 100%, 30.9% 61.8%, 0% 38.2%, 38.2% 38.2%);
 }
 
 .logo-name {
@@ -104,6 +117,10 @@ img {
   color: #4F63AD;
   font-weight: 700;
   line-height: 24px;
+}
+
+.nav-links a:hover {
+  background-color: #EAF1FA;
 }
 
 .nav-links a.active {
@@ -158,6 +175,11 @@ img {
   line-height: 24px;
 }
 
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: #9E2F3B;
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -204,6 +226,11 @@ img {
   color: #4F63AD;
   font-weight: 700;
   text-decoration: underline;
+}
+
+.quick-link:hover,
+.quick-link:active {
+  color: #C43F4C;
 }
 
 
@@ -270,8 +297,19 @@ img {
   border-radius: 999px;
   background-color: #FFFFFF;
   color: #4F63AD;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
   font-weight: 700;
   line-height: 24px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #EAF1FA;
+}
+
+.btn.clicked {
+  background-color: #C9DAF0;
 }
 
 
@@ -290,6 +328,7 @@ img {
   line-height: 24px;
 }
 
+
 @media (min-width: 768px) {
 
   .stripe {
@@ -307,6 +346,7 @@ img {
 
   .logo img {
     width: 64px;
+    height: 57px;
   }
 
   .nav-links {

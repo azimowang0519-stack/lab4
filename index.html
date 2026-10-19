@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="home">
 
   <header class="site-header">
     <a href="#" class="logo">
@@ -19,9 +19,9 @@
     </a>
     <nav>
       <ul class="nav-links">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Workshops</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#workshops">Workshops</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -30,14 +30,13 @@
 
   <main class="container">
 
-    <!-- Hero -->
     <section class="hero-grid">
 
       <div class="spotlight-banner">
         <p class="eyebrow">CREATIVE WORKSHOPS</p>
         <h1>Explore the world, one workshop at a time</h1>
         <p class="lead">Chase the sky, uncover ancient secrets, and turn plants into color. Three workshops, one curious you.</p>
-        <a href="#" class="btn-primary">See What’s On</a>
+        <a href="#workshops" class="btn-primary">See What’s On</a>
       </div>
 
       <aside class="sidebar">
@@ -56,13 +55,13 @@
 
         <hr>
 
-        <a href="#" class="quick-link">View schedule</a>
+        <a href="#workshops" class="quick-link">View schedule</a>
         <div class="stripe-small"></div>
       </aside>
 
     </section>
 
-    <h2 class="section-title">Upcoming workshops</h2>
+    <h2 class="section-title" id="workshops">Upcoming workshops</h2>
 
     <section class="cards-gallery">
 
@@ -71,7 +70,7 @@
         <p class="eyebrow">01&nbsp; OUTDOOR</p>
         <h3>Capture the Sky</h3>
         <p>Head outside to explore the open sky, chase the light, and find a sky that feels like your own.</p>
-        <a href="#" class="btn">Register Now</a>
+        <button class="btn">Register Now</button>
       </article>
 
       <article class="card card-pink">
@@ -79,7 +78,7 @@
         <p class="eyebrow">02&nbsp; HISTORY</p>
         <h3>Tomb Explorer</h3>
         <p>Follow the clues, crack ancient puzzles and traps, and uncover hidden secrets like a real expedition team.</p>
-        <a href="#" class="btn">Register Now</a>
+        <button class="btn">Register Now</button>
       </article>
 
       <article class="card">
@@ -87,7 +86,7 @@
         <p class="eyebrow">03&nbsp; CRAFT</p>
         <h3>Dyed by Nature</h3>
         <p>Use plants, fruits and flowers to make natural dyes for tie-dye, then add stitching to explore how image, texture and handcraft connect.</p>
-        <a href="#" class="btn">Register Now</a>
+        <button class="btn">Register Now</button>
       </article>
 
     </section>
@@ -96,10 +95,32 @@
 
   <div class="stripe stripe-footer"></div>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="contact">
     <p>&copy; 2026 CCT360 Hub</p>
-    <a href="#">Follow @Littlestudio</a>
+    <a href="#">Follow @littlestudio</a>
   </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.forEach(function (item) {
+          item.classList.remove("active");
+        });
+        link.classList.add("active");
+      });
+    });
+
+    const registerButtons = document.querySelectorAll(".btn");
+
+    registerButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        button.classList.add("clicked");
+        alert("Registered successfully!");
+      });
+    });
+  </script>
 
 </body>
 </html>
