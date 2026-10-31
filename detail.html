@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capture the Sky</title>
+  <title>Little Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,42 +28,72 @@
 
   <div class="stripe"></div>
 
-  <main class="container detail-layout">
+  <main class="container">
 
-    <section class="detail-hero">
-      <h1>Capture the Sky</h1>
-      <p class="lead-text">An outdoor workshop where students look up at the sky and take their own sky photos.</p>
+    <section class="hero-grid">
+
+      <div class="spotlight-banner">
+        <p class="eyebrow">CREATIVE WORKSHOPS</p>
+        <h1>Explore the world, one workshop at a time</h1>
+        <p class="lead">Chase the sky, uncover ancient secrets, and turn plants into color. Three workshops, one curious you.</p>
+        <a href="#workshops" class="btn-primary">See What’s On</a>
+      </div>
+
+      <aside class="sidebar">
+        <h2>This week</h2>
+        <h3>Next Session &amp; Details</h3>
+        <p class="session-name">Capture the Sky</p>
+        <p>Sat, Oct 17  2:00 pm-5:00 pm</p>
+        <p>Riverwood Park</p>
+        <p>Status: Open</p>
+
+        <hr>
+
+        <p class="eyebrow">ABOUT US</p>
+        <p>We run fun hands-on workshops for students.</p>
+        <p>3 workshops this fall</p>
+        <p>Free for students</p>
+
+        <hr>
+
+        <p class="eyebrow">QUICK LINKS</p>
+        <ul class="quick-links">
+          <li><a href="#workshops" class="quick-link">View schedule</a></li>
+          <li><a href="detail.html" class="quick-link">Case study</a></li>
+          <li><a href="#contact" class="quick-link">Contact us</a></li>
+        </ul>
+        <div class="stripe-small"></div>
+      </aside>
+
     </section>
 
-    <section class="content-grid">
+    <h2 class="section-title" id="workshops">Upcoming workshops</h2>
 
-      <article class="detail-article">
-        <h2>The Challenge</h2>
-        <p>Students spend a lot of time indoors and don't often look at the sky.</p>
+    <section class="cards-gallery">
 
-        <h2>Our Solution</h2>
-        <p>We went to Riverwood Park for a sky walk and learned some easy phone photo tips.</p>
-
+      <article class="card">
         <img src="assets/image1.jpg" alt="Beach with palm leaves and blue sky">
-
-        <h2>Results</h2>
-        <ul>
-          <li>18 students joined</li>
-          <li>Over 120 sky photos taken</li>
-        </ul>
+        <p class="eyebrow">01&nbsp; OUTDOOR</p>
+        <h3>Capture the Sky</h3>
+        <p>Head outside to explore the open sky, chase the light, and find a sky that feels like your own.</p>
+        <a href="detail.html" class="btn">Learn More</a>
       </article>
 
-      <aside class="meta-sidebar">
-        <h2>Workshop Details</h2>
-        <h3>Date</h3>
-        <p>Sat, Oct 17, 2026</p>
-        <h3>Category</h3>
-        <p>Outdoor</p>
-        <h3>Tools Used</h3>
-        <p>Phone camera</p>
-        <h3>Team</h3>
-        <p>Little Studio team</p>
-      </aside>
+      <article class="card card-pink">
+        <img src="assets/image2.jpg" alt="Explorer in an ancient tomb">
+        <p class="eyebrow">02&nbsp; HISTORY</p>
+        <h3>Tomb Explorer</h3>
+        <p>Follow the clues, crack ancient puzzles and traps, and uncover hidden secrets like a real expedition team.</p>
+        <button class="btn" onclick="alert('Registered successfully!')">Register Now</button>
+      </article>
+
+      <article class="card">
+        <img src="assets/image3.jpg" alt="Fabric dyed with plants and flowers">
+        <p class="eyebrow">03&nbsp; CRAFT</p>
+        <h3>Dyed by Nature</h3>
+        <p>Use plants, fruits and flowers to make natural dyes for tie-dye, then add stitching to explore how image, texture and handcraft connect.</p>
+        <button class="btn" onclick="alert('Registered successfully!')">Register Now</button>
+      </article>
 
     </section>
 
@@ -72,9 +102,26 @@
   <div class="stripe stripe-footer"></div>
 
   <footer class="site-footer" id="contact">
-    <p>&copy; 2026 CCT360 Hub</p>
-    <a href="#">Follow @littlestudio</a>
+    <p>&copy; 2026 Little Studio</p>
+    <ul class="social-links">
+      <li><a href="https://www.instagram.com/">Instagram</a></li>
+      <li><a href="https://github.com/">GitHub</a></li>
+      <li><a href="mailto:hello@littlestudio.com">Email</a></li>
+    </ul>
   </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(function (link) {
+      link.onclick = function () {
+        navLinks.forEach(function (item) {
+          item.classList.remove("active");
+        });
+        link.classList.add("active");
+      };
+    });
+  </script>
 
 </body>
 </html>
