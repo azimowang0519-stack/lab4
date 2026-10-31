@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little Studio</title>
+  <title>Little Studio | Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body id="home">
+<body>
 
   <header class="site-header">
-    <a href="#" class="logo">
-      <img src="assets/logo.png" alt="Star logo">
+    <a href="index.html" class="logo">
+      <img src="assets/logo.png" alt="Little Studio star logo">
       <div>
         <p class="logo-name">Little Studio</p>
         <p class="logo-tagline">explore, discover, make</p>
@@ -19,8 +19,8 @@
     </a>
     <nav>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#workshops">Workshops</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="detail.html">Case Study</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -43,19 +43,23 @@
         <h2>This week</h2>
         <h3>Next Session &amp; Details</h3>
         <p class="session-name">Capture the Sky</p>
-        <p>Sat, Oct 17  2:00 pm-5:00 pm</p>
+        <p>Sat, Nov 7 &nbsp;2:00 pm - 5:00 pm</p>
         <p>Riverwood Park</p>
+        <p class="status">Status: Spots available</p>
 
         <hr>
 
-        <p class="eyebrow">QUICK INFO</p>
-        <p>3 workshops this fall</p>
-        <p>Up to 20 people each</p>
+        <p class="eyebrow">ABOUT US</p>
+        <p>Little Studio is a small creative team running hands-on workshops for curious students.</p>
         <p>Free for students</p>
 
         <hr>
 
-        <a href="#workshops" class="quick-link">View schedule</a>
+        <p class="eyebrow">QUICK LINKS</p>
+        <ul class="quick-links">
+          <li><a href="#workshops" class="quick-link">View schedule</a></li>
+          <li><a href="detail.html" class="quick-link">View case study</a></li>
+        </ul>
         <div class="stripe-small"></div>
       </aside>
 
@@ -70,7 +74,7 @@
         <p class="eyebrow">01&nbsp; OUTDOOR</p>
         <h3>Capture the Sky</h3>
         <p>Head outside to explore the open sky, chase the light, and find a sky that feels like your own.</p>
-        <button class="btn" onclick="alert('Registered successfully!')">Register Now</button>
+        <a href="detail.html" class="btn">See Case Study</a>
       </article>
 
       <article class="card card-pink">
@@ -96,8 +100,12 @@
   <div class="stripe stripe-footer"></div>
 
   <footer class="site-footer" id="contact">
-    <p>&copy; 2026 CCT360 Hub</p>
-    <a href="#">Follow @littlestudio</a>
+    <p>&copy; 2026 Little Studio</p>
+    <ul class="social-links">
+      <li>Instagram</a></li>
+      <li>Facebook</a></li>
+      <li>Email</a></li>
+    </ul>
   </footer>
 
   <script>
